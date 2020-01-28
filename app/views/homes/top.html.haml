@@ -9,9 +9,14 @@
         %h4 Made this site for only you.
         %h2 Would you like some coffee or tea?
       .gorilla-items
-        .btn__sign-up
-          = link_to "#", class: "gorilla_btn" do
-            %b 新規登録
-        .btn__login
-          = link_to "#", class: "gorilla_btn" do
-            %b ログイン
+        -if  user_signed_in?
+          .btn__login
+            = link_to destroy_user_session_path, method: :delete, class: "gorilla_btn" do
+              %b ログアウト
+        -else
+          .btn__sign-up
+            = link_to new_user_registration_path, class: "gorilla_btn" do
+              %b 新規登録
+          .btn__login
+            = link_to new_user_session_path, class: "gorilla_btn" do
+              %b ログイン

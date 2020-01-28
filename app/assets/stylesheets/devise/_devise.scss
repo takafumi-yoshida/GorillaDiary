@@ -1,0 +1,95 @@
+.devise-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  .devise-design{
+    
+    & h1 {
+      padding-top: 100px; 
+      text-align: center;
+      margin: 0 auto;
+      width: 700px;
+      height: 60px;
+      font-size: 35px;
+      color: black  ;
+      font-weight: 700;
+      letter-spacing: 3px;
+      border-radius: 15px;
+      border-bottom: 1px solid black;
+    }
+  }
+  .error-messages {
+    text-align: center;
+    margin: 10px auto 0 auto;
+    height: 70px;
+    width: 500px;
+    color: rgb(243, 61, 61);
+    font-size: 18px;
+  }
+  .devise-form{
+    background-color: rgba(59, 33, 1, 0.164);
+    width: 500px;
+    margin: auto;
+    height: 350px;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(34, 31, 30);
+  
+    &__mask{
+      height: 350px;
+      position: relative;
+      border:5px solid rgb(75, 90, 10);
+      box-sizing: border-box;
+      .gollira-image{
+        margin: 50px auto;
+        width: 71px;
+        height: 42px;
+        background-image: url("/images/book.png");
+        background-size: cover;
+      }
+      .form-contents {
+        width:400px;
+        position: absolute;
+        left: 60px;
+        bottom: 20px;
+        .actions{
+          float: right;
+          .devise-btn{
+            margin-top: 10px;
+            font-size: 14px;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: 900;
+            background-color: rgba(56, 51, 37, 0.726);
+            color: #eee8df;
+            letter-spacing: 5px;
+            border-style: none;
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(56, 51, 37, 0.9);
+            }
+          }
+        }
+      }
+    }
+  }
+  .devise-links {
+    height: 30px;
+    width: 300px;
+    margin: 20px auto;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(58, 53, 53);
+    .still {
+      font-weight: 900;
+      color: rgb(100, 85, 85);
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  
+}

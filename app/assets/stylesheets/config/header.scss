@@ -8,23 +8,37 @@
   z-index: 10;
   font-weight: 900;
   display: flex;
-  align-items: center;
-  &__image{
-    width: 50px;
-    height: 50px;
-    background-image: url("/images/gorilla3.png");
-    background-size: cover;
-    border-radius: 20px;
-    margin-right: 5px;
+  justify-content: space-between;
+  &__title-logo {
+    display: flex;
+    align-items: center;
+    .title-image{
+      width: 50px;
+      height: 50px;
+      background-image: url("/images/gorilla3.png");
+      background-size: cover;
+      border-radius: 20px;
+      margin-right: 5px;
+    }
+    .title-logo {
+      width: 200px;
+      text-align: center;
+      font-size: 30px;
+      color: whitesmoke;
+      text-decoration: none;
+      &:hover {
+        color: rgb(168, 119, 54);
+      }
+    }
   }
-  &__logo {
-    width: 200px;
-    text-align: center;
-    font-size: 30px;
-    color: whitesmoke;
-    text-decoration: none;
-    &:hover {
-      color: rgb(168, 119, 54);
+  &__contents {
+    width: 300px;
+    margin-right: 50px;
+    color: white;
+    .header_btn {
+      margin-left: 30px;
+      color: whitesmoke;
+      text-decoration: none;
     }
   }
 }

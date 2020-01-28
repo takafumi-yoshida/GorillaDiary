@@ -1,0 +1,33 @@
+.devise-wrapper
+  .devise-design
+    %h1 ＜Gorilla diary.＞ に新規登録
+  .error-messages
+    = render "devise/shared/error_messages", resource: resource
+  .devise-form
+    .devise-form__mask
+      .form-contents
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          .field
+            .block
+              nickname
+            = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
+          .field
+            .block
+              email
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+          .field
+            .block
+              password
+              - if @minimum_password_length
+                %em
+                  (#{@minimum_password_length} characters minimum)
+            = f.password_field :password, autocomplete: "new-password"
+          .field
+            = f.label :password_confirmation
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+          .actions
+            = f.submit "登録", class: "devise-btn"
+  .devise-links          
+    = render "devise/shared/links"
+  
