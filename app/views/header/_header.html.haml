@@ -1,0 +1,11 @@
+- unless @top
+  .gorilla-header
+    .gorilla-header__title-logo
+      .title-image
+      = link_to root_path, class: "title-logo" do
+        Gorilla diary.
+    .gorilla-header__contents
+      - if current_user
+        マイページ（name）
+        = link_to destroy_user_session_path, method: :delete, class: "header_btn" do
+          %b ログアウト

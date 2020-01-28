@@ -8,9 +8,5 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    - unless @top
-      .gorilla-header
-        .gorilla-header__image
-        = link_to root_path, class: "gorilla-header__logo" do
-          Gorilla diary.
+    = render "header/header" 
     = yield
