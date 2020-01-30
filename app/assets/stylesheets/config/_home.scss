@@ -47,17 +47,17 @@
         letter-spacing: 3px;
         width: 500px;
         display: flex;
-        .btn__sign-up{
+        .btn__sign-up {
           margin: 0 auto;
           text-align: center;
           background-color: rgba(73, 70, 61, 0.7);
           border-radius: 20px;
           height: 70px; 
           border:3px solid rgba(61, 47, 47, 0.9);
-        &:hover{
+          &:hover{
           background-color:rgb(73, 70, 61);
         }
-          .gorilla_btn {
+          .gorilla__btn {
             display: inline-block;
             width: 120px;
             height: 70px;
@@ -73,10 +73,50 @@
           border-radius: 20px;
           height: 70px; 
           border:3px solid rgba(61, 47, 47, 0.9);
-        &:hover{
+         &:hover{
           background-color:rgb(73, 70, 61);
         }
-          .gorilla_btn {
+          .gorilla__btn {
+            display: inline-block;
+            width: 120px;
+            height: 70px;
+            color: #eee8df;
+            line-height: 70px;
+            text-decoration: none;
+          }
+        }
+
+        .btn__logout {
+          margin: 0 auto;
+          text-align: center;
+          background-color: rgba(73, 70, 61, 0.7);
+          border-radius: 20px;
+          height: 70px; 
+          border:3px solid rgba(61, 47, 47, 0.9);
+          &:hover{
+          background-color:rgb(73, 70, 61);
+        }
+          .gorilla__btn {
+            display: inline-block;
+            width: 120px;
+            height: 70px;
+            color: #eee8df;
+            line-height: 70px;
+            text-decoration: none;
+          }
+        }
+
+        .btn__index {
+          margin: 0 auto;
+          text-align: center;
+          background-color: rgba(73, 70, 61, 0.7);
+          border-radius: 20px;
+          height: 70px; 
+          border:3px solid rgba(61, 47, 47, 0.9);
+          &:hover{
+          background-color:rgb(73, 70, 61);
+        }
+          .gorilla__btn {
             display: inline-block;
             width: 120px;
             height: 70px;
