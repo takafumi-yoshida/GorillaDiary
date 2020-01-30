@@ -1,0 +1,88 @@
+.diaries-new__wrapper {
+  
+  width: 100%;
+  height: 100vh;
+  border: 1px solid rgba(253, 251, 251, 0);
+  box-sizing: border-box;
+  overflow: hidden;
+  .diary__create-main {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(68, 8, 8, 0);
+    box-sizing: border-box;
+    display: flex;
+    .diary__create-image {
+      height: 700px;
+      width: 700px;
+      background-image: url("/images/gorilla6.png");
+      background-size: cover; 
+      margin-top: 100px;
+    }
+    .diary__create-box {
+      position: relative;
+      margin: 150px 0 0 60px ;
+      height: 480px;
+      width: 580px;
+      border: 5px solid rgba(61, 58, 47, 0.9);
+      background-color: rgba(233, 222, 206, 0.938);
+      border-radius: 10px;
+      padding-top: 40px;
+      .create-title {
+        width: 400px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        .title-size {
+          width: 350px;
+          height: 40px;
+          padding: 8px 20px 0 20px;
+          border: 3px solid rgba(61, 47, 47, 0.9);
+          background-color: white;
+          font-weight: 900;
+          &::placeholder {
+            color: rgba(83, 81, 68, 0.534);
+            font-size: 20px;
+            font-weight: 900;
+          }
+        }
+      }
+      .create-content {
+        margin: 30px auto 0 auto;
+        width: 440px; 
+        .content-size {
+          width: 90%;
+          height: 270px;
+          padding: 20px;
+          font-size: 20px;
+          border: 3px solid rgba(61, 47, 47, 0.9);
+          border-radius: 10px;
+          background-color: white;
+          font-weight: 900;
+          &::placeholder {
+            color: rgba(83, 81, 68, 0.534);
+            font-size: 20px;
+            font-weight: 900;
+          }
+        }
+      }
+      .create-btn  {
+        position: absolute;
+        bottom: -135px;
+        right: 60px;
+        height: 200px;
+        .submit-size {
+          width: 100px; 
+          height: 50px;
+          background-color: rgb(73, 70, 61);
+          border-radius: 10px;
+          border:3px solid rgba(61, 47, 47, 0.9);
+          color: #eee8df;
+          cursor: pointer;
+          &:hover{
+          background-color:rgba(73, 70, 61, 0.767);
+          }
+        }
+      } 
+    }
+  }
+
+}

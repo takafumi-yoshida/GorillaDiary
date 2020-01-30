@@ -1,0 +1,51 @@
+.diaries-edit__wrapper 
+  .edit-main
+    .edit-main__left
+      
+        
+    .edit-main__right
+      .favorite-users__contents
+        .content-title
+          フォロー
+        .favorite-users
+          -# render @usersを使って
+          .favorite-user
+            .favorite-image
+            .favorite-nickname 
+              麻生太郎
+            .on__new-diary
+              -# もし新しい日記があれば
+              new diary！
+          .favorite-user 
+            .favorite-image
+            .favorite-nickname 
+              板垣退助
+            .on__new-diary
+              -# もし新しい日記があれば
+              new diary！
+          
+      .browdsing-history
+        .browdsing-history__title
+          %p 閲覧履歴
+        -# render @diariesを使って or each 文
+        .browdsing-history__diaries
+          .browdsing-history__diary
+            .browdsing-history__diary-head
+              .history-image
+              .history-nickname 
+                麻生太郎
+              .history-datimes
+                2020/05/05
+            .browdsing-history__diary-bottom
+              タイトル： 
+              やったー！今晩の夜食は洋食だ！！
+          .browdsing-history__diary
+            .browdsing-history__diary-head
+              .history-image
+              .history-nickname 
+                安倍晋三
+              .history-datimes
+                2020/05/04
+            .browdsing-history__diary-bottom
+              タイトル：
+              今夜の一言日記

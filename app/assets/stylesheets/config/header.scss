@@ -32,11 +32,18 @@
     }
   }
   &__contents {
-    width: 300px;
-    margin-right: 50px;
+    width: 500px;
     color: white;
+    margin-right: 10px;
+    .header_btn-1{
+      font-size: 18px;
+      margin-right: 40px;
+      color: whitesmoke;
+      text-decoration: none;
+    }
     .header_btn {
-      margin-left: 30px;
+      font-size: 18px;
+      margin-left: 40px;
       color: whitesmoke;
       text-decoration: none;
     }

@@ -6,6 +6,11 @@
         Gorilla diary.
     .gorilla-header__contents
       - if current_user
-        マイページ（name）
+        = link_to edit_user_path(current_user.id), class: "header_btn-1" do
+          = current_user.nickname
+        = link_to new_diary_path, class: "header_btn" do
+          %b 新規投稿
+        = link_to  diaries_path, class: "header_btn" do
+          %b 投稿一覧
         = link_to destroy_user_session_path, method: :delete, class: "header_btn" do
           %b ログアウト

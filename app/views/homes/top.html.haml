@@ -10,13 +10,16 @@
         %h2 Would you like some coffee or tea?
       .gorilla-items
         -if  user_signed_in?
-          .btn__login
-            = link_to destroy_user_session_path, method: :delete, class: "gorilla_btn" do
+          .btn__index
+            = link_to diaries_path, class: "gorilla__btn" do
+              %b 日記一覧
+          .btn__logout
+            = link_to destroy_user_session_path, method: :delete, class: "gorilla__btn" do
               %b ログアウト
         -else
           .btn__sign-up
-            = link_to new_user_registration_path, class: "gorilla_btn" do
+            = link_to new_user_registration_path, class: "gorilla__btn" do
               %b 新規登録
           .btn__login
-            = link_to new_user_session_path, class: "gorilla_btn" do
+            = link_to new_user_session_path, class: "gorilla__btn" do
               %b ログイン

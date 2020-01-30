@@ -1,0 +1,139 @@
+.diaries-edit__wrapper {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 225, 225, 0);
+  .edit-main {
+    display: flex;
+    margin-top: 69px;
+    height: calc(100% - 69px);
+    box-sizing: border-box;
+    &__left {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    &__right {
+      width: 600px;
+      height: 100%;
+      
+      padding: 20px 10px 0 10px;
+      
+      box-sizing: border-box;
+      .favorite-users__contents {
+        width: 320px;
+        height: 45%;
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: rgba(99, 86, 51, 0.658);
+        margin: 0 auto;
+        
+        font-weight: 900;
+        border-radius: 10px;
+
+        .content-title {
+          width: 100px;
+          height: 30px;
+          text-align: center;
+          background-color: whitesmoke;
+          font-size: 20px;
+          
+          border-radius: 10px;
+          margin: 0 auto;
+         
+        }
+        .favorite-users {
+          height: calc( 100% - 35px);
+          background-color: whitesmoke;
+          border-radius: 10px;
+          margin-top: 5px;
+          overflow: scroll;
+          .favorite-user {
+            display: flex;
+            height: 40px;
+            border-bottom: 2px solid rgba(182, 145, 42, 0.479);
+            padding-left: 10px;
+            margin: 15px auto;
+            box-sizing: border-box;
+            .favorite-image{
+              width: 45px;
+              height: 35px;
+              background-image: url("/images/gorilla4.png"); 
+              background-size: cover;
+            }
+            .favorite-nickname  {
+              line-height: 50px;
+              margin-left: 25px;
+              font-size: 15px;
+            }
+            .on__new-diary {
+              
+              line-height: 45px;
+              margin-left: 25px;
+              font-weight: 900;
+              color: rgb(221, 60, 60);
+            }  
+          }
+        }
+      }
+      .browdsing-history {
+        height: 48%;
+        width: 300px;
+        background-color: rgba(99, 86, 51, 0.658);
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px auto 0 auto;
+        .browdsing-history__title{
+          width: 100px;
+          height: 30px;
+          text-align: center;
+          background-color: whitesmoke;
+          font-size: 20px;
+          font-weight: 900;
+          border-radius: 10px;
+          margin: 0 auto;
+        }
+        .browdsing-history__diaries {
+          height: calc( 100% - 40px);
+          background-color: whitesmoke;
+          border-radius: 10px;
+          margin: 5px auto 10px auto;
+          overflow: scroll;
+          .browdsing-history__diary {
+            padding: 5px 0 5px 10px;
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: 900;
+            border-bottom: 2px solid rgba(182, 145, 42, 0.479);
+            .browdsing-history__diary-head{
+              position: relative;
+              display: flex;
+              .history-image{
+                width: 35px;
+                height: 21px;
+                background-image: url("/images/book.png");
+                background-size: cover;
+              }
+              .history-nickname {
+                margin-left: 20px;
+                font-size: 15px;
+              }
+              .history-datimes {
+                position: absolute;
+                right: 55px;
+                bottom: 3px;
+                font-weight: 900;
+                color: rgb(223, 112, 39);
+              }  
+            }
+            .browdsing-history__diary-bottom {
+              font-size: 12px ;
+              margin-top: 20px;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
