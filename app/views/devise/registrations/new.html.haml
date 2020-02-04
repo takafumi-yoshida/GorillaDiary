@@ -23,8 +23,7 @@
                   (#{@minimum_password_length} characters minimum)
             = f.password_field :password, autocomplete: "new-password"
           .field
-            = f.label :password_confirmation
-            %br/
+            password (確認用)
             = f.password_field :password_confirmation, autocomplete: "new-password"
           .actions
             = f.submit "登録", class: "devise-btn"

@@ -9,9 +9,35 @@
     height: calc(100% - 69px);
     box-sizing: border-box;
     &__left {
+      border:1px solid red;
       height: 100%;
       width: 100%;
-      position: relative;
+      .form-contents {
+       
+        border:1px solid red;
+        width:400px;
+        box-sizing: border-box;
+        .actions{
+          float: right;
+          .devise-btn{
+            margin-top: 10px;
+            font-size: 14px;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: 900;
+            background-color: rgba(56, 51, 37, 0.726);
+            color: #eee8df;
+            letter-spacing: 5px;
+            border-style: none;
+            outline: 0;
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(56, 51, 37, 0.9);
+            }
+          }
+        }
+      }
     }
     &__right {
       width: 600px;

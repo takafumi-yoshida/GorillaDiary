@@ -1,8 +1,19 @@
 .diaries-edit__wrapper 
   .edit-main
     .edit-main__left
-      
-        
+      .form-contents
+        = form_with model:@user, local: true do |f|
+          .form_title
+          .field
+            .block
+              nickname
+            = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
+          .field
+            .block
+              email
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+          .action
+            = f.submit "登録", class: "edit-btn"   
     .edit-main__right
       .favorite-users__contents
         .content-title

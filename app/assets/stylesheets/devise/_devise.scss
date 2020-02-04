@@ -24,19 +24,18 @@
     text-align: center;
     margin: 0 auto 0 auto;
     height: 90px;
-    width: 500px;
+    width: 600px;
     color: rgb(243, 61, 61);
-    font-size: 18px;
+    font-size: 12px;
   }
   .devise-form{
     background-color: rgba(59, 33, 1, 0.164);
     width: 500px;
     margin: auto;
     height: 350px;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 400;
-    color: rgb(34, 31, 30);
-  
+    color: rgb(34, 31, 30); 
     &__mask{
       height: 350px;
       position: relative;
@@ -54,6 +53,7 @@
         position: absolute;
         left: 60px;
         bottom: 20px;
+        box-sizing: border-box;
         .actions{
           float: right;
           .devise-btn{
@@ -67,6 +67,7 @@
             color: #eee8df;
             letter-spacing: 5px;
             border-style: none;
+            outline: 0;
             cursor: pointer;
             &:hover {
               background-color: rgba(56, 51, 37, 0.9);

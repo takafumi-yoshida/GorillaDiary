@@ -10,14 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_28_040844) do
+ActiveRecord::Schema.define(version: 2020_02_02_043245) do
 
-  create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content", null: false
     t.bigint "user_id"
+    t.bigint "diary_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["diary_id"], name: "index_comments_on_diary_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "datetimes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "year"
+    t.integer "month"
+    t.integer "day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "content", null: false
+    t.bigint "user_id"
+    t.bigint "datetime_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["datetime_id"], name: "index_diaries_on_datetime_id"
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
@@ -25,9 +45,6 @@ ActiveRecord::Schema.define(version: 2020_01_28_040844) do
     t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.integer "year"
-    t.integer "month"
-    t.integer "data"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -38,5 +55,8 @@ ActiveRecord::Schema.define(version: 2020_01_28_040844) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "diaries"
+  add_foreign_key "comments", "users"
+  add_foreign_key "diaries", "datetimes"
   add_foreign_key "diaries", "users"
 end

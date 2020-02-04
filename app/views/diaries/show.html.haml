@@ -1,0 +1,28 @@
+.diaries-show__wrapper 
+  .show-main
+    .show-main__content
+      .side-bar
+      .show-diary__box__wrapper
+        .show-diary__box
+          .show-diary__box__title
+            = @diary.title
+          .show-diary__box__content
+            = @diary.content
+        .comments-box__wrapper
+          .comments-box__title
+            コメント一覧
+          .comments-box
+            - @comments.each do |comment|
+              .comment-box
+                .name
+                  = comment.user.nickname
+                  さんからのコメント：
+                .comment
+                  = comment.content
+          .comment-form__wrapper
+            .comment-form
+              = form_with model: [@diary, @comment], class: "form-a",local:true do |f|  
+                = f.text_area :content, placeholder: "comment：", class: "form-size" 
+                = f.submit  "投稿", class: "submit-btm__size"  
+
+      
