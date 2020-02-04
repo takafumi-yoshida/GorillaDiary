@@ -1,35 +1,86 @@
 .diaries-edit__wrapper 
   .edit-main
     .edit-main__left
-      .form-contents
-        = form_with model:@user, local: true do |f|
-          .form_title
-          .field
-            .block
-              nickname
-            = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
-          .field
-            .block
-              email
-            = f.email_field :email, autofocus: true, autocomplete: "email"
-          .action
-            = f.submit "登録", class: "edit-btn"   
+      .top
+        .posts-title
+          MyDiary
+        .posts-box
+          .post-box
+            .post-title
+              頑張りましょうああああああああああああ
+            .post-content
+              ほんま甲斐ないいいいいいいいいwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            .post-datetime
+              2019/03/01
+          .post-box
+          .post-box
+          .post-box
+          .post-box
+          .post-box
+          .empty-box
+        
+      .bottom
+        .favorites-title
+          FavoriteDiary
+        .favorites-box
+          .favorite-box
+            .favorite-title
+            .favorite-content
+            .favorite-user
+          .favorite-box
+            .favorite-title
+            .favorite-content
+            .favorite-user
+          .favorite-box
+            .favorite-title
+            .favorite-content
+            .favorite-user
+          .favorite-box
+            .favorite-title
+            .favorite-content
+            .favorite-user
+          .favorite-box
+            .favorite-title
+            .favorite-content
+            .favorite-user
+          .favorite-box
+            .favorite-title
+            .favorite-content
+            .favorite-user
+          .empty-box
+      .form-contents__wrapper
+        = form_with model:@user, local: true , class: "form-b" do |f|
+          .form-title
+            アカウント編集
+          %button{class:"edit-btn", id:"edit-btn", type:"button"}
+            ❌
+          .form-contents
+            .field
+              .block
+                nickname
+              = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
+            .field
+              .block
+                email
+              = f.email_field :email, autofocus: true, autocomplete: "email"
+            .action
+              = f.submit "登録", class: "edit-btn"   
     .edit-main__right
-      .favorite-users__contents
+      .following-users__contents
         .content-title
           フォロー
-        .favorite-users
+        .following-users
           -# render @usersを使って
-          .favorite-user
-            .favorite-image
-            .favorite-nickname 
+          .following-user
+            .following-image
+            .following-nickname 
               麻生太郎
             .on__new-diary
               -# もし新しい日記があれば
               new diary！
-          .favorite-user 
-            .favorite-image
-            .favorite-nickname 
+          .following-user 
+            .following-image
+            .following-nickname 
               板垣退助
             .on__new-diary
               -# もし新しい日記があれば

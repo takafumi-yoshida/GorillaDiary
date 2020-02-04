@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
 
   def edit
+    @edit = "this is edit "
     @user = User.find(current_user.id)
   end
 
   def update
     User.update(user_params)
-    redirect_to diaries_path
   end
 
   private

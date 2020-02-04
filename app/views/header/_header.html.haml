@@ -4,6 +4,10 @@
       .title-image
       = link_to root_path, class: "title-logo" do
         Gorilla diary.
+    -if @edit
+      .edit-button
+        %button
+          アカウント編集する
     .gorilla-header__contents
       - if current_user
         = link_to edit_user_path(current_user.id), class: "header_btn-1" do
