@@ -1,13 +1,12 @@
 .diaries-new__wrapper
+  .diary__create-main
   .diary__create-image
-    .diary__create-main
-      .diary__create-image
-      .diary__create-box
-        = form_with(model: @diary)  do |f|
-          .create_form
-            .create-title
-              = f.text_field :title , placeholder: "タイトル：", class: "title-size"
-            .create-content
-              = f.text_area :content, placeholder: "本文：", class: "content-size"
-            .create-btn  
-              = f.submit  "投稿", class: "submit-size"
+  .diary__create-box
+    = form_with(model: @diary, local: true)  do |f|
+      .create_form
+        .create-title
+          = f.text_field :title , placeholder: "タイトル：", class: "title-size"
+        .create-content
+          = f.text_area :content, placeholder: "本文：", class: "content-size"
+        .create-btn  
+          = f.submit  "投稿", class: "submit-size"

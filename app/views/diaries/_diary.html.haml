@@ -1,0 +1,18 @@
+= link_to diary_path(diary.id), class: "dairy_path" do
+  .new-diary
+    .new-diary__title
+      = diary.title
+      .new-diary__contributor
+        .contributor
+          投稿者:
+          = diary.user.nickname
+        .datetime
+          投稿日:
+          = diary.datetime.year
+          年
+          = diary.datetime.month
+          月
+          = diary.datetime.day
+          日
+    .new-diary__content
+      = diary.content

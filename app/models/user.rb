@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   has_many :diaries
+  has_many :comments
 
   validates :nickname, presence: true, uniqueness: true
   # Include default devise modules. Others available are:
