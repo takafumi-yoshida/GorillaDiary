@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_02_043245) do
+ActiveRecord::Schema.define(version: 2020_02_06_093054) do
+
+  create_table "browsing_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "diary_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diary_id"], name: "index_browsing_histories_on_diary_id"
+    t.index ["user_id"], name: "index_browsing_histories_on_user_id"
+  end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", null: false
@@ -41,6 +50,15 @@ ActiveRecord::Schema.define(version: 2020_02_02_043245) do
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "diary_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diary_id"], name: "index_likes_on_diary_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
@@ -55,8 +73,12 @@ ActiveRecord::Schema.define(version: 2020_02_02_043245) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "browsing_histories", "diaries"
+  add_foreign_key "browsing_histories", "users"
   add_foreign_key "comments", "diaries"
   add_foreign_key "comments", "users"
   add_foreign_key "diaries", "datetimes"
   add_foreign_key "diaries", "users"
+  add_foreign_key "likes", "diaries"
+  add_foreign_key "likes", "users"
 end

@@ -20,8 +20,27 @@ class DiariesController < ApplicationController
 
   def show
     @diary = Diary.find(params[:id])
+    @user = User.find(current_user.id)
     @comment = Comment.new
+    @like = Like.new
+    new_history = @diary.browsing_histories.new
     @comments = @diary.comments.includes(:user).order(id:"DESC")
+    
+    unless @user.diaries.exists?(id: params[:id]) then
+      new_history.user_id = current_user.id
+
+      if current_user. browsing_histories.exists?(diary_id: params[:id])
+        old_history = current_user.browsing_histories.find_by(diary_id: params[:id])
+        old_history.destroy
+      end
+      new_history.save
+      
+      histories_stock_limit = 10
+      histories = current_user.browsing_histories.all
+      if histories.count > histories_stock_limit
+        histories[0].destroy
+      end
+    end
   end
   private
 

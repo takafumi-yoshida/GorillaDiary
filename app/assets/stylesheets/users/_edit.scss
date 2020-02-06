@@ -18,13 +18,14 @@
           width: 200px;
           height: 40px;
           font-size: 28px;
+          color: rgb(184, 41, 41);
           font-weight: 700;
           margin: 20px 0 0 50px;
           text-align: center;
           border-bottom: 5px solid rgb(77, 64, 64);
         }
         .posts-box{
-          width: 1000px;
+          width: 1068px;
           height: calc(100% - 70px);
           display: flex;
           align-items: center;
@@ -32,59 +33,66 @@
           &::-webkit-scrollbar {
             display:none;
         }
-          .post-box{
+          .mydiary-path {
+            display: block;
+            text-decoration: none;
             margin-left:30px;
-            width: 280px;
-            height: 250px;
-            min-width: 280px;
-            box-shadow: 0.2em 0.2em 0.5em;
-            border-radius: 10px;
-            background-color: rgba(110, 85, 85, 0.486);
-            &:hover {
-              box-shadow: none;
-            }
-            .post-title{
-              width: 180px;
-              height: 25px;
-              font-size: 13px;
-              text-align: center;
-              line-height: 30px;
-              padding: 0 10px;
-              margin: 12px auto;
-              box-shadow: 0.2em 0.2em 0.5em;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              color: rgb(107, 95, 95);
-              border-radius: 10px;
-              font-weight: 550;
-              background-color: rgb(250, 250, 250);
-            }
-            .post-content{
-              width: 230px;
-              height: 160px;
-              padding: 5px;
-              margin: 0 auto;
-              font-size: 13px;
-              word-wrap: break-word;
-              color: rgb(107, 95, 95);
-              text-overflow: ellipsis;
-              overflow: scroll;
+            color: black;
+            .post-box{
+              width: 280px;
+              height: 250px;
+              min-width: 280px;
               box-shadow: 0.2em 0.2em 0.5em;
               border-radius: 10px;
-              font-weight: 550;
-              background-color: rgb(250, 250, 250)
-            }
-            .post-datetime {
-              width: 200px;
-              height: 20px;
-              margin: 3px 0 0 60px;
-              font-size: 13px;
-              text-align: right;
-              letter-spacing: 1px;
-              line-height: 25px;
-              font-weight: 700;
-              color: rgb(37, 16, 16);
+              background-color: rgba(110, 85, 85, 0.486);
+              display: inline-block;
+              cursor: pointer;
+              &:hover {
+                box-shadow: none;
+              }
+              .post-title{
+                width: 180px;
+                height: 25px;
+                font-size: 13px;
+                text-align: center;
+                line-height: 30px;
+                padding: 0 10px;
+                margin: 10px auto;
+                box-shadow: 0.2em 0.2em 0.5em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: rgb(107, 95, 95);
+                border-radius: 10px;
+                font-weight: 550;
+                background-color: rgb(250, 250, 250);
+              }
+              .post-content{
+                width: 230px;
+                height: 160px;
+                padding: 5px;
+                margin: 0 auto;
+                font-size: 13px;
+                word-wrap: break-word;
+                color: rgb(107, 95, 95);
+                text-overflow: ellipsis;
+                overflow: scroll;
+                box-shadow: 0.2em 0.2em 0.5em;
+                border-radius: 10px;
+                font-weight: 550;
+                background-color: rgb(250, 250, 250)
+              }
+              .post-datetime {
+                width: 200px;
+                height: 20px;
+                margin: 3px 0 0 60px;
+                font-size: 13px;
+                text-align: right;
+                letter-spacing: 1px;
+                line-height: 25px;
+                font-weight: 700;
+                color: rgb(37, 16, 16);
+              }
             }
           }
           .empty-box {
@@ -104,10 +112,11 @@
           font-weight: 700;
           margin-left: 50px;
           text-align: center;
+          color: rgb(163, 155, 42);
           border-bottom: 5px solid rgb(77, 64, 64);
         }
         .favorites-box{
-          width: 1000px;
+          width: 1068px;
           height: calc(100% - 70px);
           display: flex;
           align-items: center;
@@ -123,6 +132,7 @@
             box-shadow: 0.2em 0.2em 0.5em;
             border-radius: 10px;
             background-color: rgba(110, 85, 85, 0.486);
+            cursor: pointer;
             &:hover {
               box-shadow: none;
             }
@@ -158,16 +168,27 @@
               font-weight: 550;
               background-color: rgb(250, 250, 250)
             }
-            .favorite-user {
-              width: 200px;
+            .favorite-bottom {
+              display: flex;
+              justify-content: space-between;
+              width: 250px;
               height: 20px;
-              margin: 3px 0 0 60px;
-              font-size: 13px;
+              margin: 3px 0 0 10px;
               text-align: right;
               letter-spacing: 1px;
               line-height: 25px;
               font-weight: 700;
               color: rgb(37, 16, 16);
+              .favorite-user {
+                line-height: 30px;
+                width: 110px;
+                text-align: end;
+                font-size: 13px;
+              }
+              .favorite-datetime {
+                line-height: 30px;
+                font-size: 13px;
+              }
             }
           }
           .empty-box {
@@ -183,6 +204,7 @@
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.95);
+        
         display: none;
         .form-b {
           position: relative;
@@ -222,21 +244,22 @@
         .form-image {
           height: 300px;
           width: 500px;
-          border: 1px sorid red;
         }
       } 
     }
     &__right {
-      width: 600px;
+      width: 500px;
       height: 100%;
-      padding: 20px 10px 0 10px;
+      padding-top: 20px;
       box-sizing: border-box;
+      background-color: rgb(252, 250, 244);
+      border-left: 3px solid rgb(221, 194, 164);
       .following-users__contents {
         width: 320px;
         height: 45%;
         box-sizing: border-box;
         padding: 10px;
-        background-color: rgba(99, 86, 51, 0.658);
+        background-color: rgba(128, 114, 77, 0.658);
         margin: 0 auto;
         font-weight: 900;
         border-radius: 10px;
@@ -247,7 +270,7 @@
           text-align: center;
           background-color: whitesmoke;
           font-size: 20px;
-          
+          box-shadow: 0.2em 0.2em 0.5em;
           border-radius: 10px;
           margin: 0 auto;
          
@@ -289,7 +312,7 @@
       .browdsing-history {
         height: 48%;
         width: 300px;
-        background-color: rgba(99, 86, 51, 0.658);
+        background-color: rgba(128, 114, 77, 0.658);
         border-radius: 10px;
         padding: 10px;
         margin: 20px auto 0 auto;
@@ -303,6 +326,7 @@
           font-weight: 900;
           border-radius: 10px;
           margin: 0 auto;
+          box-shadow: 0.2em 0.2em 0.5em;
         }
         .browdsing-history__diaries {
           height: calc( 100% - 40px);
@@ -340,6 +364,10 @@
             .browdsing-history__diary-bottom {
               font-size: 12px ;
               margin-top: 20px;
+              
+              color: rgb(107, 95, 95);
+              text-overflow: ellipsis;
+              overflow: hidden;
             }
             
           }
