@@ -1,18 +1,28 @@
-= link_to diary_path(diary.id), class: "dairy_path" do
-  .new-diary
-    .new-diary__title
-      = diary.title
-      .new-diary__contributor
-        .contributor
-          投稿者:
-          = diary.user.nickname
-        .datetime
-          投稿日:
-          = diary.datetime.year
-          年
-          = diary.datetime.month
-          月
-          = diary.datetime.day
-          日
-    .new-diary__content
-      = diary.content
+.new-diary__wrapper
+  -if diary.user.id != current_user.id
+    = icon("far", "star")
+    - if current_user.already_liked?(diary)
+      = link_to diary_like_path(diary,diary.id), method: :delete, class: "favorite-btn__a" do
+        = icon("fas", "star")
+    - else
+      = link_to diary_likes_path(diary.id), method: :post, class: "favorite-btn__b" do
+        = icon("fas", "star")
+  = link_to diary_path(diary.id), class: "dairy_path" do
+    .new-diary
+      .new-diary__title
+        = diary.title
+        .new-diary__contributor
+          .contributor
+            投稿者:
+            = diary.user.nickname
+          .datetime
+            投稿日:
+            = diary.datetime.year
+            年
+            = diary.datetime.month
+            月
+            = diary.datetime.day
+            日
+      .new-diary__content
+        = diary.content
+      

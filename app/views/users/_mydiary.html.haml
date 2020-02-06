@@ -1,0 +1,9 @@
+= link_to diary_path(mydiary.id),class: "mydiary-path" do
+  .post-box
+    .post-title
+      = mydiary.title
+    .post-content
+      = mydiary.content
+    .post-datetime
+      = mydiary.created_at.strftime('%Y/%m/%d')
+      

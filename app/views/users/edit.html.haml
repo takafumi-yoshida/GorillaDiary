@@ -5,48 +5,23 @@
         .posts-title
           MyDiary
         .posts-box
-          .post-box
-            .post-title
-              頑張りましょうああああああああああああ
-            .post-content
-              ほんま甲斐ないいいいいいいいいwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            .post-datetime
-              2019/03/01
-          .post-box
-          .post-box
-          .post-box
-          .post-box
-          .post-box
+          = render partial: 'mydiary', collection: @mydiaries, as: :mydiary
           .empty-box
-        
       .bottom
         .favorites-title
           FavoriteDiary
         .favorites-box
-          .favorite-box
-            .favorite-title
-            .favorite-content
-            .favorite-user
-          .favorite-box
-            .favorite-title
-            .favorite-content
-            .favorite-user
-          .favorite-box
-            .favorite-title
-            .favorite-content
-            .favorite-user
-          .favorite-box
-            .favorite-title
-            .favorite-content
-            .favorite-user
-          .favorite-box
-            .favorite-title
-            .favorite-content
-            .favorite-user
-          .favorite-box
-            .favorite-title
-            .favorite-content
-            .favorite-user
+          - @favoritediaries.each do |favoritediary|
+            .favorite-box
+              .favorite-title
+                = favoritediary.diary.title
+              .favorite-content
+                = favoritediary.diary.content
+              .favorite-bottom
+                .favorite-user
+                  = favoritediary.diary.user.nickname
+                .favorite-datetime
+                  = favoritediary.diary.created_at.strftime('%Y/%m/%d')
           .empty-box
       .form-contents__wrapper
         = form_with model:@user, local: true , class: "form-b" do |f|
@@ -74,7 +49,7 @@
           .following-user
             .following-image
             .following-nickname 
-              麻生太郎
+              麻生太郎ああ
             .on__new-diary
               -# もし新しい日記があれば
               new diary！
@@ -91,23 +66,14 @@
           %p 閲覧履歴
         -# render @diariesを使って or each 文
         .browdsing-history__diaries
-          .browdsing-history__diary
-            .browdsing-history__diary-head
-              .history-image
-              .history-nickname 
-                麻生太郎
-              .history-datimes
-                2020/05/05
-            .browdsing-history__diary-bottom
-              タイトル： 
-              やったー！今晩の夜食は洋食だ！！
-          .browdsing-history__diary
-            .browdsing-history__diary-head
-              .history-image
-              .history-nickname 
-                安倍晋三
-              .history-datimes
-                2020/05/04
-            .browdsing-history__diary-bottom
-              タイトル：
-              今夜の一言日記
+          - @historydiaries2.each do |historydiary|
+            .browdsing-history__diary
+              .browdsing-history__diary-head
+                .history-image
+                .history-nickname 
+                  = historydiary.user.nickname
+                .history-datimes
+                  = historydiary.created_at.strftime('%Y/%m/%d')
+              .browdsing-history__diary-bottom
+                タイトル： 
+                = historydiary.title
