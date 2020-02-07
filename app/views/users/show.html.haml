@@ -1,0 +1,26 @@
+.user-show__wrapper 
+  .show-main
+    .show-main__content
+      .side-bar
+        .side-bar__name_box
+          .user-name_title
+            ＜ ユーザー名 ＞
+          .user-name
+            .user_image
+            = @user.nickname
+          .follow_btns
+            - unless current_user.id == @user.id
+              - if current_user.following?(@user)
+                = link_to user_relationship_path(@user,@user.id), method: :delete, class: "follow-btn__a" do
+                  = icon("fab", "ello")
+                  .G
+                    G
+              -else
+                = link_to user_relationships_path(@user.id), method: :post, class: "follow-btn__b" do
+                  = icon("fab", "ello")
+                  .G
+                    G
+      .user__diaries
+        = render partial: 'userdiary', collection: @diaries, as: :diary
+        .last-box
+          aaaaaa

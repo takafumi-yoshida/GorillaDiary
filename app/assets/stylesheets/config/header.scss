@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Creepster);
+
 .gorilla-header {
   display: flex;
   justify-content: space-between;
@@ -24,7 +26,8 @@
     .title-logo {
       width: 200px;
       text-align: center;
-      font-size: 30px;
+      font-size: 29px;
+      font-family: 'Creepster', cursive;
       color: whitesmoke;
       text-decoration: none;
       &:hover {
@@ -51,13 +54,15 @@
     width: 500px;
     display: flex;
     .header_btn-1{
-      height: 100%;
       width: 120px;
       font-size: 18px;
       margin-right: 40px;
       color: whitesmoke;
       text-decoration: none;
       text-align: end;
+      &:hover {
+        color: rgb(168, 119, 54);
+      }
     }
     .header_btn {
       height: 100%;
@@ -67,6 +72,9 @@
       color: whitesmoke;
       margin-left: 25px;
       text-decoration: none;
+      &:hover {
+        color: rgb(168, 119, 54);
+      }
     }
   }
   

@@ -21,6 +21,7 @@ class DiariesController < ApplicationController
   def show
     @diary = Diary.find(params[:id])
     @user = User.find(current_user.id)
+    @writer = User.find(@diary.user_id)
     @comment = Comment.new
     @like = Like.new
     new_history = @diary.browsing_histories.new

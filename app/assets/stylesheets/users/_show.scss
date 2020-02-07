@@ -1,28 +1,87 @@
-.diaries-index__wrapper {
+.user-show__wrapper {
+  position: relative;
   height: 100vh;
-  width: 100vw;
-  
-  .index-main {
+  width: 100%;
+  overflow: hidden;
+  .show-main {
     display: flex;
     width: 100%;
-    height: 100vh;
-    
+    height: 100%  ;
     &__content {
       display: flex;
       height: 100%;
       width: 100%;
-      overflow-x: scroll;
       .side-bar {
         background-color: rgba(143, 134, 17, 0.514);
         height : 100%;
         width: 280px;
+        padding-top: 60px;
+        .side-bar__name_box {
+          position: relative;
+          padding-top: 60px;
+          height: 200px;
+          background-color: cornsilk;
+          border-radius: 10px;
+          .user-name_title {
+            font-size: 35px;
+            border-bottom: 1px solid black;
+            border-radius: 10px;
+            padding-bottom: 5px;
+            text-align: center;
+          }
+          .user-name{
+            height: 20px;
+            font-size: 20px;
+            color: rgb(63, 28, 3);
+            margin-top: 35px;
+            padding-left: 20px;
+            display: flex;
+            .user_image {
+              width: 45px;
+              height: 35px;
+              background-image: url("/images/gorilla4.png"); 
+              background-size: cover;
+              margin-right: 20px;
+            }
+          }
+          .follow_btns {
+              position: absolute;
+              right: 25px;
+              bottom: 40px;
+              z-index: 6;
+            .follow-btn__a {
+              font-size: 60px;
+              color:rgb(241, 168, 10);
+            }
+            .follow-btn__b {
+              font-size: 60px;
+              color: rgba(241, 168, 10, 0.253);
+              &:hover {
+                color:rgb(241, 168, 10);
+              }
+            }
+          }
+          .G {
+            position: absolute;
+            right: 20px;
+            bottom: 30px;
+            font-size: 25px;
+            color: rgb(92, 47, 47);
+            z-index: 5;
+           }
+          .datetime-box {
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+          }
+        }
       }
-      .new__diaries {
+      .user__diaries {
         display: flex;
         width: calc(100% - 280px);
         height: 100%;
         overflow-x: scroll;
-        .new-diary__wrapper {
+        .user-diary__wrapper {
           position: relative;
           width: 500px;
           height: 530px;
@@ -53,13 +112,13 @@
             right: 36px;
             z-index: 10;
             color: rgb(46, 44, 42);
-            font-size: 30px;        
+            font-size: 30px;         
           }
           .dairy_path{
             width: 500px;
             height: 530px;
             text-decoration: none;
-            .new-diary {
+            .user-diary {
               background-color: rgba(233, 222, 206, 0.9);
               border: 3px solid rgba(94, 91, 89, 0.719);
               border-radius: 10px;
@@ -81,7 +140,7 @@
                 border-bottom: 3px solid rgba(46, 44, 42, 0.719);
                 overflow: scroll;
                 
-                .new-diary__contributor {
+                .user-diary__contributor {
                   display: flex;
                   position: absolute;
                   bottom: -5px;
@@ -103,7 +162,7 @@
                   }
                 }
               }
-              .new-diary__content {
+              .user-diary__content {
                 width: 400px;
                 height: 370px;
                 font-size: 16px;
