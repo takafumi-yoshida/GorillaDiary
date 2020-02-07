@@ -12,16 +12,17 @@
           FavoriteDiary
         .favorites-box
           - @favoritediaries.each do |favoritediary|
-            .favorite-box
-              .favorite-title
-                = favoritediary.diary.title
-              .favorite-content
-                = favoritediary.diary.content
-              .favorite-bottom
-                .favorite-user
-                  = favoritediary.diary.user.nickname
-                .favorite-datetime
-                  = favoritediary.diary.created_at.strftime('%Y/%m/%d')
+            = link_to diary_path(favoritediary.diary_id),class: "favoritediary-path" do
+              .favorite-box
+                .favorite-title
+                  = favoritediary.diary.title
+                .favorite-content
+                  = favoritediary.diary.content
+                .favorite-bottom
+                  .favorite-user
+                    = favoritediary.diary.user.nickname
+                  .favorite-datetime
+                    = favoritediary.diary.created_at.strftime('%Y/%m/%d')
           .empty-box
       .form-contents__wrapper
         = form_with model:@user, local: true , class: "form-b" do |f|
@@ -45,35 +46,27 @@
         .content-title
           フォロー
         .following-users
-          -# render @usersを使って
-          .following-user
-            .following-image
-            .following-nickname 
-              麻生太郎ああ
-            .on__new-diary
-              -# もし新しい日記があれば
-              new diary！
-          .following-user 
-            .following-image
-            .following-nickname 
-              板垣退助
-            .on__new-diary
-              -# もし新しい日記があれば
-              new diary！
-          
+          - @followusers2.each do |followuser|
+            = link_to user_path(followuser.id), class: "followuser" do
+              .following-user
+                .following-image
+                .following-nickname 
+                  = followuser.nickname
+                .on__new-diary
+                  new diary！
       .browdsing-history
         .browdsing-history__title
           %p 閲覧履歴
-        -# render @diariesを使って or each 文
         .browdsing-history__diaries
           - @historydiaries2.each do |historydiary|
-            .browdsing-history__diary
-              .browdsing-history__diary-head
-                .history-image
-                .history-nickname 
-                  = historydiary.user.nickname
-                .history-datimes
-                  = historydiary.created_at.strftime('%Y/%m/%d')
-              .browdsing-history__diary-bottom
-                タイトル： 
-                = historydiary.title
+            =link_to diary_path(historydiary.id),class: "historydiary-path" do
+              .browdsing-history__diary
+                .browdsing-history__diary-head
+                  .history-image
+                  .history-nickname 
+                    = historydiary.user.nickname
+                  .history-datimes
+                    = historydiary.created_at.strftime('%Y/%m/%d')
+                .browdsing-history__diary-bottom
+                  タイトル： 
+                  = historydiary.title

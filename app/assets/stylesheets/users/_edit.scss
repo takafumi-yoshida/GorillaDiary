@@ -34,7 +34,6 @@
             display:none;
         }
           .mydiary-path {
-            display: block;
             text-decoration: none;
             margin-left:30px;
             color: black;
@@ -85,7 +84,7 @@
               .post-datetime {
                 width: 200px;
                 height: 20px;
-                margin: 3px 0 0 60px;
+                margin: 7px 0 0 60px;
                 font-size: 13px;
                 text-align: right;
                 letter-spacing: 1px;
@@ -123,74 +122,81 @@
           overflow-x: scroll;
           &::-webkit-scrollbar {
             display:none;
-        }
-          .favorite-box{
+          }
+          .favoritediary-path {
+            text-decoration: none;
             margin-left:30px;
-            width: 280px;
-            height: 250px;
-            min-width: 280px;
-            box-shadow: 0.2em 0.2em 0.5em;
-            border-radius: 10px;
-            background-color: rgba(110, 85, 85, 0.486);
-            cursor: pointer;
-            &:hover {
-              box-shadow: none;
-            }
-            .favorite-title {
-              width: 180px;
-              height: 25px;
-              font-size: 13px;
-              text-align: center;
-              line-height: 30px;
-              padding: 0 10px;
-              margin: 12px auto;
-              box-shadow: 0.2em 0.2em 0.5em;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              color: rgb(107, 95, 95);
-              border-radius: 10px;
-              font-weight: 550;
-              background-color: rgb(250, 250, 250);
-            }
-            .favorite-content {
-              width: 230px;
-              height: 160px;
-              padding: 5px;
-              margin: 0 auto;
-              font-size: 13px;
-              word-wrap: break-word;
-              color: rgb(107, 95, 95);
-              text-overflow: ellipsis;
-              overflow: scroll;
+            color: black;
+            .favorite-box{
+              width: 280px;
+              height: 250px;
+              min-width: 280px;
               box-shadow: 0.2em 0.2em 0.5em;
               border-radius: 10px;
-              font-weight: 550;
-              background-color: rgb(250, 250, 250)
-            }
-            .favorite-bottom {
-              display: flex;
-              justify-content: space-between;
-              width: 250px;
-              height: 20px;
-              margin: 3px 0 0 10px;
-              text-align: right;
-              letter-spacing: 1px;
-              line-height: 25px;
-              font-weight: 700;
-              color: rgb(37, 16, 16);
-              .favorite-user {
-                line-height: 30px;
-                width: 110px;
-                text-align: end;
-                font-size: 13px;
+              background-color: rgba(110, 85, 85, 0.486);
+              display: inline-block;
+              cursor: pointer;
+              &:hover {
+                box-shadow: none;
               }
-              .favorite-datetime {
-                line-height: 30px;
+              .favorite-title {
+                width: 180px;
+                height: 25px;
                 font-size: 13px;
+                text-align: center;
+                line-height: 30px;
+                padding: 0 10px;
+                margin: 12px auto;
+                box-shadow: 0.2em 0.2em 0.5em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: rgb(107, 95, 95);
+                border-radius: 10px;
+                font-weight: 550;
+                background-color: rgb(250, 250, 250);
+              }
+              .favorite-content {
+                width: 230px;
+                height: 160px;
+                padding: 5px;
+                margin: 0 auto;
+                font-size: 13px;
+                word-wrap: break-word;
+                color: rgb(107, 95, 95);
+                text-overflow: ellipsis;
+                overflow: scroll;
+                box-shadow: 0.2em 0.2em 0.5em;
+                border-radius: 10px;
+                font-weight: 550;
+                background-color: rgb(250, 250, 250)
+              }
+              .favorite-bottom {
+                display: flex;
+                justify-content: space-between;
+                width: 220px;
+                height: 20px;
+                margin: 3px 0 0 35px;
+                text-align: right;
+                letter-spacing: 1px;
+                line-height: 25px;
+                font-weight: 700;
+                color: rgb(37, 16, 16);
+                .favorite-user {
+                  line-height: 30px;
+                  width: 110px;
+                  text-align: end;
+                  font-size: 13px;
+                }
+                .favorite-datetime {
+                  line-height: 30px;
+                  font-size: 13px;
+                }
               }
             }
           }
+          
+          
           .empty-box {
             width: 50px;
             height: 50px;
@@ -204,7 +210,6 @@
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.95);
-        
         display: none;
         .form-b {
           position: relative;
@@ -281,31 +286,39 @@
           border-radius: 10px;
           margin-top: 5px;
           overflow: scroll;
-          .following-user {
-            display: flex;
-            height: 40px;
-            border-bottom: 2px solid rgba(182, 145, 42, 0.479);
-            padding-left: 10px;
-            margin: 15px auto;
-            box-sizing: border-box;
-            .following-image{
-              width: 45px;
-              height: 35px;
-              background-image: url("/images/gorilla4.png"); 
-              background-size: cover;
+          .followuser {
+            text-decoration: none;
+            .following-user {
+              display: flex;
+              height: 40px;
+              border-bottom: 2px solid rgba(182, 145, 42, 0.479);
+              padding-left: 10px;
+              margin: 15px auto;
+              box-sizing: border-box;
+              color: rgb(58, 48, 48);
+              &:hover {
+                background-color: rgb(216, 216, 212);
+                box-shadow: 0.2em 0.2em 0.5em;
+              }
+              .following-image{
+                width: 45px;
+                height: 35px;
+                background-image: url("/images/gorilla4.png"); 
+                background-size: cover;
+              }
+              .following-nickname  {
+                line-height: 50px;
+                margin-left: 25px;
+                font-size: 15px;
+              }
+              .on__new-diary {
+                
+                line-height: 45px;
+                margin-left: 25px;
+                font-weight: 900;
+                color: rgb(221, 60, 60);
+              }  
             }
-            .following-nickname  {
-              line-height: 50px;
-              margin-left: 25px;
-              font-size: 15px;
-            }
-            .on__new-diary {
-              
-              line-height: 45px;
-              margin-left: 25px;
-              font-weight: 900;
-              color: rgb(221, 60, 60);
-            }  
           }
         }
       }
@@ -334,42 +347,51 @@
           border-radius: 10px;
           margin: 5px auto 10px auto;
           overflow: scroll;
-          .browdsing-history__diary {
-            padding: 5px 0 5px 10px;
-            margin-top: 20px;
-            font-size: 15px;
-            font-weight: 900;
-            border-bottom: 2px solid rgba(182, 145, 42, 0.479);
-            .browdsing-history__diary-head{
-              position: relative;
-              display: flex;
-              .history-image{
-                width: 35px;
-                height: 21px;
-                background-image: url("/images/book.png");
-                background-size: cover;
-              }
-              .history-nickname {
-                margin-left: 20px;
-                font-size: 15px;
-              }
-              .history-datimes {
-                position: absolute;
-                right: 55px;
-                bottom: 3px;
-                font-weight: 900;
-                color: rgb(223, 112, 39);
-              }  
-            }
-            .browdsing-history__diary-bottom {
-              font-size: 12px ;
+          .historydiary-path {
+            text-decoration: none;
+            .browdsing-history__diary {
+              padding: 5px 0 5px 10px;
               margin-top: 20px;
+              font-size: 15px;
+              font-weight: 900;
+              border-bottom: 2px solid rgba(182, 145, 42, 0.479);
+              color: rgb(58, 48, 48);
+              &:hover {
+                background-color: rgb(216, 216, 212);
+                box-shadow: 0.2em 0.2em 0.5em;
+              }
+              .browdsing-history__diary-head{
+                position: relative;
+                display: flex;
+                .history-image{
+                  width: 35px;
+                  height: 21px;
+                  background-image: url("/images/book.png");
+                  background-size: cover;
+                }
+                .history-nickname {
+                  margin-left: 20px;
+                  font-size: 15px;
+                  color: rgb(58, 48, 48);
+                }
+                .history-datimes {
+                  position: absolute;
+                  right: 55px;
+                  bottom: 3px;
+                  font-weight: 900;
+                  color: rgb(223, 112, 39);
+                }  
+              }
+              .browdsing-history__diary-bottom {
+                font-size: 12px ;
+                margin-top: 20px;
+                
+                color: rgb(107, 95, 95);
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
               
-              color: rgb(107, 95, 95);
-              text-overflow: ellipsis;
-              overflow: hidden;
             }
-            
           }
         }
       }

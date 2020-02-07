@@ -48,14 +48,45 @@
         background-image: url("/images/book.png");
         background-size: cover;
       }
-      .form-contents {
+      .form-contents-a {
         width:400px;
         position: absolute;
         left: 60px;
-        bottom: 20px;
+        bottom: 25px;
         box-sizing: border-box;
         .actions{
-          float: right;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          .devise-btn{
+            margin-top: 10px;
+            font-size: 14px;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: 900;
+            background-color: rgba(56, 51, 37, 0.726);
+            color: #eee8df;
+            letter-spacing: 5px;
+            border-style: none;
+            outline: 0;
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(56, 51, 37, 0.9);
+            }
+          }
+        }
+      }
+      .form-contents-b {
+        width:400px;
+        position: absolute;
+        left: 60px;
+        bottom: 60px;
+        box-sizing: border-box;
+        .actions{
+          position: absolute;
+          bottom: -27px;
+          right: 0;
           .devise-btn{
             margin-top: 10px;
             font-size: 14px;

@@ -2,6 +2,28 @@
   .show-main
     .show-main__content
       .side-bar
+        .side-bar__name_box
+          .user-name_title
+            ＜ 投稿者 ＞
+          .user-name
+            .user_image
+            = link_to user_path(@writer.id), class: "user-nickname" do
+              = @writer.nickname
+          .follow_btns
+            - unless current_user.id == @writer.id
+              - if current_user.following?(@writer)
+                = link_to user_relationship_path(@user,@writer.id), method: :delete, class: "follow-btn__a" do
+                  = icon("fab", "ello")
+                  .G
+                    G
+              -else
+                = link_to user_relationships_path(@writer.id), method: :post, class: "follow-btn__b" do
+                  = icon("fab", "ello")
+                  .G
+                    G
+          .datetime-box
+            投稿日：
+            = @diary.created_at.strftime('%Y/%m/%d')
       .show-diary__box__wrapper
         .show-diary__box
           .show-diary__box__title
@@ -24,5 +46,3 @@
               = form_with model: [@diary, @comment], class: "form-a",local:true do |f|  
                 = f.text_area :content, placeholder: "comment：", class: "form-size" 
                 = f.submit  "投稿", class: "submit-btm__size"  
-
-      

@@ -1,4 +1,4 @@
-.new-diary__wrapper
+.user-diary__wrapper
   - unless diary.user.id == current_user.id
     = icon("far", "star")
     - if current_user.already_liked?(diary)
@@ -8,10 +8,10 @@
       = link_to diary_likes_path(diary.id), method: :post, class: "favorite-btn__b" do
         = icon("fas", "star")
   = link_to diary_path(diary.id), class: "dairy_path" do
-    .new-diary
-      .new-diary__title
+    .user-diary
+      .user-diary__title
         = diary.title
-        .new-diary__contributor
+        .user-diary__contributor
           .contributor
             投稿者:
             = diary.user.nickname
@@ -23,6 +23,5 @@
             月
             = diary.datetime.day
             日
-      .new-diary__content
+      .user-diary__content
         = diary.content
-      
