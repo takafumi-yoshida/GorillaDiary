@@ -12,7 +12,7 @@
       height: 100%;
       width: 100%;
       .side-bar {
-        background-color: rgba(143, 134, 17, 0.514);
+        background: radial-gradient(ellipse at bottom, rgb(160, 155, 86) 50%, rgb(175, 171, 114) 100%);
         height : 100%;
         width: 280px;
         padding-top: 60px;
@@ -58,6 +58,7 @@
               font-size: 60px;
               color: rgba(241, 168, 10, 0.253);
               &:hover {
+                transition: 1s;
                 color:rgb(241, 168, 10);
               }
             }
@@ -114,7 +115,8 @@
             color: rgb(46, 44, 42);
             font-size: 30px; 
             :hover {
-              color: rgb(247, 240, 144);
+              transition: 0.7s;
+              color: rgba(255, 251, 8, 0.671);
             }         
           }
           .dairy_path{
@@ -135,13 +137,15 @@
                 height: 80px;
                 line-height: 80px;
                 font-size: 20px;
-                padding-left: 30px;
+                padding: 0 70px 0 30px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 font-weight: 900;
                 border-radius: 10px;
                 color: rgb(66, 58, 58);
                 background-color: rgba(245, 243, 239, 0.349);
                 border-bottom: 3px solid rgba(46, 44, 42, 0.719);
-                overflow: scroll;
                 
                 .user-diary__contributor {
                   display: flex;
@@ -155,6 +159,9 @@
                   padding: 0 5px;
                   font-size: 13px;
                   color: rgb(65, 61, 55);
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
                   .contributor {
                     font-weight: 900;
                     line-height: 30px;
@@ -180,10 +187,14 @@
                 letter-spacing: 1px;
                 box-shadow: 0.2em 0.2em 0.5em black;
                 word-wrap: break-word;
+                
               }
             }
           }
         }    
+      }
+      .last-box{
+        color: white;
       }
     }
   }
