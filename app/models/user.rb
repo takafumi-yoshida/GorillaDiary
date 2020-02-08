@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :history_diaries, through: :browsing_histories, source: :diary
   has_many :relationships
   has_many :followings, through: :relationships, source: :follow
-  validates :nickname, presence: true, uniqueness: true
+  validates :nickname, presence: true, uniqueness: true, length: { maximum: 6 }
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthabl

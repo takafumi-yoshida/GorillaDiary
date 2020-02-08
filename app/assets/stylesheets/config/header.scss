@@ -48,6 +48,9 @@
       cursor: pointer;
       outline: 0;
       border-radius: 10px;
+      &:hover {
+        color: rgb(168, 119, 54);
+      }
     }
   }
   &__contents {
@@ -76,6 +79,31 @@
         color: rgb(168, 119, 54);
       }
     }
+    .header_btn-a {
+      height: 100%;
+      width: 80px;
+      font-size: 15px;
+      display: block;
+      color: whitesmoke;
+      margin-left: 25px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 1s;
+      &.jq_trans {
+        transform: translate(0px, -50px) rotate(0deg);
+      }
+    }
+    .header_btn-b {
+      height: 100%;
+      width: 80px;
+      font-size: 15px;
+      display: block;
+      color: whitesmoke;
+      margin-left: 25px;
+      text-decoration: none;
+      &:hover {
+        color: rgb(168, 119, 54);
+      }
+    }
   }
-  
 }

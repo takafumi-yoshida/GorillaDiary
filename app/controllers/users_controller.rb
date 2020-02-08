@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
     @followusers1 = User.all
     @followusers2 = []
+
     @followes.each do |follow|
       @followusers2 << User.find(follow.follow_id)
     end

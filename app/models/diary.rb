@@ -7,4 +7,5 @@ class Diary < ApplicationRecord
   has_many :browsing_histories, dependent: :destroy
   has_many :history_diaries, through: :browsing_histories, source: :user
   validates :title, :content, presence: true
+  validates_uniqueness_of :datetime_id, scope: :user_id
 end
