@@ -30,12 +30,13 @@
             text-align: center;
           }
           .user-name{
-            height: 20px;
-            font-size: 20px;
+            height: 40px;
+            font-size: 17px;
             color: rgb(63, 28, 3);
-            margin-top: 35px;
+            margin-top: 40px;
             padding-left: 20px;
             display: flex;
+            line-height: 40px;
             .user_image {
               width: 45px;
               height: 35px;
@@ -102,7 +103,6 @@
             top: 14px;
             right: 37px;
             z-index: 10;
-            
             color: rgb(248, 232, 7);
             font-size: 28px;
           }
@@ -112,7 +112,10 @@
             right: 36px;
             z-index: 10;
             color: rgb(46, 44, 42);
-            font-size: 30px;         
+            font-size: 30px; 
+            :hover {
+              color: rgb(247, 240, 144);
+            }         
           }
           .dairy_path{
             width: 500px;
@@ -147,7 +150,7 @@
                   right: 0px;
                   justify-content: space-between;
                   float: right;
-                  width: 55%;
+                  width: 60%;
                   margin-right: 20px;
                   padding: 0 5px;
                   font-size: 13px;
