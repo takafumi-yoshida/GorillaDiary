@@ -6,6 +6,7 @@ class Diary < ApplicationRecord
   has_many :liked_diaries, through: :likes, source: :user
   has_many :browsing_histories, dependent: :destroy
   has_many :history_diaries, through: :browsing_histories, source: :user
-  validates :title, :content, presence: true
+  validates :content, presence: true
+  validates :title, presence: true, length: { maximum: 20 }
   validates_uniqueness_of :datetime_id, scope: :user_id
 end

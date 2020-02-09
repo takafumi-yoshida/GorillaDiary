@@ -2,10 +2,10 @@
   - unless diary.user.id == current_user.id
     = icon("far", "star")
     - if current_user.already_liked?(diary)
-      = link_to diary_like_path(diary,diary.id), method: :delete, class: "favorite-btn__a" do
+      = link_to diary_like_path(diary,diary.id), method: :delete, remote: true, class: "favorite-btn__a" do
         = icon("fas", "star")
     - else
-      = link_to diary_likes_path(diary.id), method: :post, class: "favorite-btn__b" do
+      = link_to diary_likes_path(diary.id), method: :post, remote: true, class: "favorite-btn__b" do
         = icon("fas", "star")
   = link_to diary_path(diary.id), class: "dairy_path" do
     .user-diary

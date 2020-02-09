@@ -1,11 +1,30 @@
 class LikesController < ApplicationController
   def create
-    @like = current_user.likes.create(diary_id: params[:diary_id])
-    redirect_back(fallback_location: root_path)
+    @diaries = Diary.includes(:user, :datetime).order(id:"DESC")
+    @diary = Diary.find(params[:diary_id])
+    @writer = User.find(@diary.user_id)
+    @writer_diaries = @writer.diaries.order(created_at: :desc)
+      respond_to do |format|
+        if @like = current_user.likes.create(diary_id: params[:diary_id])
+          format.js
+        end
+      end
+
   end
+
   def destroy
     @like = Like.find_by(diary_id: params[:diary_id],user_id: current_user.id)
-    @like.destroy
-    redirect_back(fallback_location: root_path)
+    @diaries = Diary.includes(:user, :datetime).order(id:"DESC")
+    @diary = Diary.find(params[:diary_id])
+    @writer = User.find(@diary.user_id)
+    @writer_diaries = @writer.diaries.order(created_at: :desc)
+
+    respond_to do |format|
+      if @like.destroy
+         format.js
+      end
+    end
+
   end
+
 end
