@@ -27,7 +27,7 @@
           width: 500px;
           height: 530px;
           border-radius: 10px;
-          margin: 150px 0 0 55px;
+          margin: 200px 0 0 40px;
           min-width: 500px;
           text-decoration: none;
           .far {
@@ -55,7 +55,7 @@
             font-size: 30px;
             :hover {
               transition: 0.7s;
-              color: rgba(255, 251, 8, 0.671);
+              color: rgba(255, 251, 8, 0.021);
             }     
           }
           .dairy_path{
@@ -69,6 +69,7 @@
               box-shadow: 0.2em 0.2em 0.5em black;
               text-decoration: none;
               &:hover {
+                transition: 0.3s;
                 box-shadow:none;
               }
               &__title {
@@ -117,20 +118,20 @@
                 background-color: white;
                 border-radius: 10px;
                 overflow-y: scroll;
-                padding: 20px 30px;
-                line-height: 35px;
+                padding: 0px 25px;
+                line-height: 23px;
                 font-weight: bold;
-                letter-spacing: 1px;
                 box-shadow: 0.2em 0.2em 0.5em black;
                 word-wrap: break-word;
+                white-space: pre-wrap;
               }
             } 
           }
+        }
+        .last-box{
+          min-width:  40px;
         }    
-      }
-      .last-box{
-        color: white;
-      }
+      } 
     }
   }
 }

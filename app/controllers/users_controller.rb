@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def edit
     @edit = "this is edit "
     @user = User.find(current_user.id)
-    @mydiaries = @user.diaries
+    @mydiaries = @user.diaries.order(created_at: :desc)
     @favoritediaries = Like.where(user_id: @user).includes(:user)
     @BrowsingHistories = BrowsingHistory.where(user_id: @user).order(created_at: :desc)
     @followes = Relationship.where(user_id: @user).order(created_at: :desc)
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @diaries = @user.diaries
+    @diaries = @user.diaries.order(created_at: :desc)
   end
   private
   def user_params

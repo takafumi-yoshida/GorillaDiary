@@ -43,10 +43,11 @@
               min-width: 280px;
               box-shadow: 0.2em 0.2em 0.5em;
               border-radius: 10px;
-              background-color: rgb(201, 187, 145);
+              background-color: rgba(110, 85, 85, 0.486);
               display: inline-block;
               cursor: pointer;
               &:hover {
+                transition: 0.3s;
                 box-shadow: none;
               }
               .post-title{
@@ -69,22 +70,25 @@
               .post-content{
                 width: 230px;
                 height: 160px;
-                padding: 5px;
+                padding:0 10px 0 10px;
                 margin: 0 auto;
                 font-size: 13px;
                 word-wrap: break-word;
+                white-space: pre-wrap;
                 color: rgb(107, 95, 95);
                 text-overflow: ellipsis;
                 overflow: scroll;
                 box-shadow: 0.2em 0.2em 0.5em;
                 border-radius: 10px;
                 font-weight: 550;
-                background-color: rgb(250, 250, 250)
+                box-sizing: border-box;
+                background-color: rgb(250, 250, 250);
+                line-height: 15px;
               }
               .post-datetime {
                 width: 200px;
                 height: 20px;
-                margin: 7px 0 0 60px;
+                margin: 10px 0 0 60px;
                 font-size: 13px;
                 text-align: right;
                 letter-spacing: 1px;
@@ -133,10 +137,11 @@
               min-width: 280px;
               box-shadow: 0.2em 0.2em 0.5em;
               border-radius: 10px;
-              background-color: rgb(201, 187, 145);
+              background-color: rgba(110, 85, 85, 0.486);
               display: inline-block;
               cursor: pointer;
               &:hover {
+                transition: 0.3s;
                 box-shadow: none;
               }
               .favorite-title {
@@ -159,24 +164,27 @@
               .favorite-content {
                 width: 230px;
                 height: 160px;
-                padding: 5px;
+                padding:0 10px 0 10px;
                 margin: 0 auto;
                 font-size: 13px;
                 word-wrap: break-word;
+                white-space: pre-wrap;
                 color: rgb(107, 95, 95);
                 text-overflow: ellipsis;
                 overflow: scroll;
                 box-shadow: 0.2em 0.2em 0.5em;
                 border-radius: 10px;
                 font-weight: 550;
-                background-color: rgb(250, 250, 250)
+                box-sizing: border-box;
+                background-color: rgb(250, 250, 250);
+                line-height: 15px;
               }
               .favorite-bottom {
                 display: flex;
                 justify-content: space-between;
                 width: 220px;
                 height: 20px;
-                margin: 3px 0 0 35px;
+                margin: 8px 0 0 35px;
                 text-align: right;
                 letter-spacing: 1px;
                 line-height: 25px;
@@ -257,14 +265,14 @@
       height: 100%;
       padding-top: 20px;
       box-sizing: border-box;
-      border-left: 10px solid rgb(31, 56, 33);
-      background-color: rgb(209, 184, 143);
+      background-color: rgb(224, 220, 207);
+      border-left: 10px solid rgb(25, 48, 7);
       .following-users__contents {
         width: 320px;
         height: 45%;
         box-sizing: border-box;
         padding: 10px;
-        background-color: rgb(131, 70, 70);
+        background-color: rgba(136, 121, 48, 0.658);
         margin: 0 auto;
         font-weight: 900;
         border-radius: 10px;
@@ -299,6 +307,7 @@
               &:hover {
                 background-color: rgb(216, 216, 212);
                 box-shadow: 0.2em 0.2em 0.5em;
+                transition: 0.3s;
               }
               .following-image{
                 width: 45px;
@@ -325,7 +334,7 @@
       .browdsing-history {
         height: 48%;
         width: 300px;
-        background-color: rgb(131, 70, 70);
+        background-color: rgba(136, 121, 48, 0.658);
         border-radius: 10px;
         padding: 10px;
         margin: 20px auto 0 auto;
@@ -359,6 +368,7 @@
               &:hover {
                 background-color: rgb(216, 216, 212);
                 box-shadow: 0.2em 0.2em 0.5em;
+                transition: 0.3s;
               }
               .browdsing-history__diary-head{
                 position: relative;
@@ -384,11 +394,12 @@
               }
               .browdsing-history__diary-bottom {
                 font-size: 12px ;
+                padding-right: 5px;
                 margin-top: 20px;
-                
                 color: rgb(107, 95, 95);
-                text-overflow: ellipsis;
                 overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
               }
               
             }

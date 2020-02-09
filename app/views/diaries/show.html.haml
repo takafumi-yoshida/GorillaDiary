@@ -44,5 +44,5 @@
           .comment-form__wrapper
             .comment-form
               = form_with model: [@diary, @comment], class: "form-a",local:true do |f|  
-                = f.text_area :content, placeholder: "comment：", class: "form-size" 
+                = f.text_area :content, placeholder: "comment：(200文字まで)", class: "form-size" 
                 = f.submit  "投稿", class: "submit-btm__size"  

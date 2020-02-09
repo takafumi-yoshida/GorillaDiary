@@ -5,7 +5,7 @@
     = form_with(model: @diary, local: true)  do |f|
       .create_form
         .create-title
-          = f.text_field :title , placeholder: "タイトル：", class: "title-size"
+          = f.text_field :title , placeholder: "タイトル：(20文字まで)", class: "title-size"
         .create-content
           = f.text_area :content, placeholder: "本文：", class: "content-size"
         .create-btn  
