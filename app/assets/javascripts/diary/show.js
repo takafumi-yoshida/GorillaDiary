@@ -13,7 +13,6 @@ $(function(){
     return html;  
   }
   $(".form-a").on("submit",function(e){
-    console.log(5)
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');

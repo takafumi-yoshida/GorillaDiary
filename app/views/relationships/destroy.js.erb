@@ -1,0 +1,2 @@
+$(".follow_btns").html('<%= j(render(partial:"diaries/diary", collection: @diaries ,as: :diary)) %>')
+$(".follow_btns").html('<%= j(render(partial:"users/userdiary", collection: @writer_diaries, as: :diary)) %>')
