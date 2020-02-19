@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   def validate_dairy
     d1 = Date.today.to_s
     @d2 = Date.parse(d1)
+    
     if @last_diary = current_user.diaries.last
       @last_diary_datetime = Datetime.find(@last_diary.datetime_id)
     else
