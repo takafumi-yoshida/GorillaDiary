@@ -1,5 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Creepster);
-
+@mixin btn {
+  height: 100%;
+  width: 80px;
+  font-size: 15px;
+  display: block;
+  color: whitesmoke;
+  line-height: 70px;
+  margin-left: 0px;
+  text-decoration: none;
+  &:hover {
+    transition: 1s;
+    color: rgb(207, 146, 65);
+  }
+}
 .gorilla-header {
   
   display: flex;
@@ -7,30 +19,28 @@
   height: 70px;
   width: 100%;
   background: linear-gradient(-80deg, rgba(51, 51, 22, 0.95) 10%, rgb(44, 49, 34) 100% );
-  line-height: 70px;
   padding: 0 30px;
-  position: fixed;
-  z-index: 10;
-  font-weight: 900;
   box-sizing: border-box;
   &__title-logo {
+    
     display: flex;
     align-items: center;
     .title-image{
       width: 50px;
       height: 50px;
+      
       background-image: url("/images/gorilla3.png");
       background-size: cover;
       border-radius: 20px;
       margin-right: 5px;
     }
     .title-logo {
+      
       width: 200px;
       text-align: center;
       font-size: 29px;
       font-family: 'Creepster', cursive;
       color: whitesmoke;
-      text-decoration: none;
       &:hover {
         transition: 1s;
         color: rgb(207, 146, 65);
@@ -38,9 +48,9 @@
     }
   }
   .edit-button {
+    
     button {
       width: 250px;
-      text-align: center;
       margin-top: 25px;
       font-size: 20px;
       color: rgb(231, 226, 216);
@@ -48,7 +58,6 @@
       border: none;
       border-bottom: 1px solid rgb(219, 215, 208);
       cursor: pointer;
-      outline: 0;
       border-radius: 10px;
       &:hover {
         transition: 1s;
@@ -57,64 +66,39 @@
     }
   }
   &__contents {
-    width: 500px;
+   
+    width: 400px;
     display: flex;
-    .header_btn-1{
-      width: 120px;
-      font-size: 18px;
-      margin-right: 40px;
-      color: whitesmoke;
-      text-decoration: none;
-      text-align: end;
-      &:hover {
-        transition: 1s;
-        color: rgb(207, 146, 65);
-      }
-    }
-    .header_btn {
-      height: 100%;
-      width: 80px;
-      font-size: 15px;
-      display: block;
-      color: whitesmoke;
-      margin-left: 25px;
-      text-decoration: none;
-      &:hover {
-        transition: 1s;
-        color: rgb(207, 146, 65);
-      }
-    }
-    .header_btn-a {
-      height: 100%;
-      width: 80px;
-      font-size: 15px;
-      display: block;
-      color: whitesmoke;
-      margin-left: 25px;
-      text-decoration: none;
-      cursor: pointer;
+    ul {
+      display: flex;
       
-      &:hover {
-        transition: 1s;
-        color: rgb(207, 146, 65);
-      }
-      &.jq_trans {
-        transition: all 5s;
-        transform: translate(0px,-50px) rotate(0deg);
-      }
-    }
-    .header_btn-b {
-      height: 100%;
-      width: 80px;
-      font-size: 15px;
-      display: block;
-      color: whitesmoke;
-      margin-left: 25px;
-      text-decoration: none;
-      &:hover {
-        transition: 1s;
-        color: rgb(207, 146, 65);
+      li {
+        .header_btn-1{
+          @include btn;
+          width: 120px;
+          font-size: 18px;
+          color: whitesmoke;
+          text-decoration: none;
+          &:hover {
+            transition: 1s;
+            color: rgb(207, 146, 65);
+          }
+        }
+        .header_btn {
+          @include btn;
+        }
+        .header_btn-a {
+          @include btn;
+          &.jq_trans {
+            transition: all 5s;
+            transform: translate(0px,-50px) rotate(0deg);
+          }
+        }
+        .header_btn-b {
+          @include btn;
+        }
       }
     }
   }
 }
+    

@@ -36,12 +36,17 @@ fieldset,
 legend,
 input,
 textarea,
+button,
+a,
 p,
 blockquote,
 th,
 td {
   margin:0;
   padding:0;
+  list-style: none;
+  text-decoration: none;
+  outline: 0;
 }
 table {
   border-collapse:collapse;

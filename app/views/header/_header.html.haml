@@ -9,16 +9,22 @@
         %button
           %Edit Account
     .gorilla-header__contents
-      - if current_user
-        = link_to edit_user_path(current_user.id), class: "header_btn-1" do
-          = current_user.nickname
-        - if @d2.year == @last_diary_datetime.year && @d2.month == @last_diary_datetime.month && @d2.day == @last_diary_datetime.day
-          .header_btn-a
-            %b 新規投稿 
-        -else
-          = link_to new_diary_path, class: "header_btn-b" do
-            %b 新規投稿
-        = link_to  diaries_path, class: "header_btn" do
-          %b 投稿一覧
-        = link_to destroy_user_session_path, method: :delete, class: "header_btn" do
-          %b ログアウト
+      %ul
+        - if current_user
+          %li
+            = link_to edit_user_path(current_user.id), class: "header_btn-1" do
+              = current_user.nickname
+          %li
+            - if @d2.year == @last_diary_datetime.year && @d2.month == @last_diary_datetime.month && @d2.day == @last_diary_datetime.day
+              .header_btn-a
+                %b 新規投稿 
+            -else
+              %li
+                = link_to new_diary_path, class: "header_btn-b" do
+                  %b 新規投稿
+          %li
+            = link_to  diaries_path, class: "header_btn" do
+              %b 投稿一覧
+          %li
+            = link_to destroy_user_session_path, method: :delete, class: "header_btn" do
+              %b ログアウト
