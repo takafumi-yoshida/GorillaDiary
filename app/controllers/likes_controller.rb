@@ -4,8 +4,9 @@ class LikesController < ApplicationController
     @diary = Diary.find(params[:diary_id])
     @writer = User.find(@diary.user_id)
     @writer_diaries = @writer.diaries.order(created_at: :desc)
-      respond_to do |format|
-        if @like = current_user.likes.create(diary_id: params[:diary_id])
+    @like = current_user.likes.new(diary_id: params[:diary_id])
+      if @like.save
+        respond_to do |format|
           format.js
         end
       end

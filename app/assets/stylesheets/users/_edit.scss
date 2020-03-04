@@ -1,11 +1,9 @@
 .diaries-edit__wrapper {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   .edit-main {
     display: flex;
-    margin-top: 69px;
-    height: calc(100% - 69px);
+    height: 100%;
     box-sizing: border-box;
     &__left {
       position: relative;

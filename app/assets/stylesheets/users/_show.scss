@@ -1,6 +1,6 @@
 .user-show__wrapper {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 70px);
   width: 100%;
   overflow: hidden;
   .show-main {
@@ -88,7 +88,7 @@
           width: 500px;
           height: 530px;
           border-radius: 10px;
-          margin: 200px 0 0 40px;
+          margin: 90px 0 0 40px;
           min-width: 500px;
           text-decoration: none;
           .far {
