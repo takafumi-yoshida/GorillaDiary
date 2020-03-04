@@ -1,5 +1,5 @@
 .diaries-index__wrapper {
-  height: 661px;
+  height: calc(100vh - 70px);
   width: 100%;
   .index-main {
     display: flex;
@@ -23,7 +23,7 @@
           position: relative;
           height: 490px;
           border-radius: 10px;
-          margin: 80px 0 0 40px;
+          margin: 100px 0 0 40px;
           min-width: 500px;
           text-decoration: none;
           .far {
