@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: GorillaDiary_production
-  username: GorillaDiary
-  password: <%= ENV['GORILLADIARY_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
