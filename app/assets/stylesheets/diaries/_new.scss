@@ -17,7 +17,7 @@
   }
   .diary__create-image {
     position: absolute;
-    bottom: 0px;
+    bottom: -70px;
     height: 300px;
     width: 300px;
     background-image: url("/images/gorilla6.png");
@@ -81,7 +81,7 @@
     }
     .create-btn  {
       position: absolute;
-      bottom: 10px;
+      bottom: 30px;
       right: 40px;
       height: 50px;
       .submit-size {
