@@ -1,3 +1,7 @@
-
-$(".new__diaries").html('<%= j(render(partial:"diaries/diary", collection: @diaries ,as: :diary)) %>').append('<div class="last-box"></div>')
-$(".user__diaries").html('<%= j(render(partial:"users/userdiary", collection: @writer_diaries, as: :diary)) %>').append('<div class="last-box"></div>')
+var html = `<i class="far fa-star"></i>
+            <%= link_to diary_like_path(@diary,@diary.id), method: :delete, remote: true, class: "favorite-btn__a" do %>
+            <i class="fas fa-star"></i>
+            <% end %>`
+$(".new__diaries").html('<%= j(render(partial:"diaries/diary", collection: @diaries ,as: :diary)) %>').append('<div class="last-box"></div>');
+$(".user__diaries").html('<%= j(render(partial:"users/userdiary", collection: @writer_diaries, as: :diary)) %>').append('<div class="last-box"></div>');
+$(".show-diary__box__like").html(html);

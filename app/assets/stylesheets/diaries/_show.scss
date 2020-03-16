@@ -93,7 +93,7 @@
         padding-top: 0px;
         overflow: hidden;
         .show-diary__box {
-         
+          position: relative;
           height: 600px;
           width: 680px;
           border: 5px solid rgba(61, 58, 47, 0.9);
@@ -101,7 +101,7 @@
           border-radius: 10px;
           font-size: 20px;
           line-height: 40px;
-          margin: 25px 70px  10px 70px ;
+          margin: 60px 70px  10px 70px ;
           padding-top: 20px;
           box-shadow: 0.2em 0.2em 0.5em black;
           &__title {
@@ -119,6 +119,34 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+          }
+          &__like {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            color: rgba(46, 44, 42, 0.719);
+            font-size: 50px;
+            z-index: 9;
+            .favorite-btn__a {
+              position: absolute;
+              top: 6px;
+              right: 7px;
+              z-index: 10;
+              color: rgb(255, 251, 8);
+              font-size: 38px;
+            }
+            .favorite-btn__b {
+              position: absolute;
+              top: 6px;
+              right: 7px;
+              z-index: 10;
+              color: rgb(114, 110, 106);
+              font-size: 38px;
+              :hover {
+                transition: 0.7s;
+                color: rgba(255, 251, 8, 0.021);
+              }     
+            }
           }
           &__content {
               width: 75%;
@@ -146,7 +174,7 @@
           width: 29%;
           background-color: rgba(255, 255, 255, 0.479);
           .comments-box__title {
-            margin: 20px auto;
+            margin: 40px auto;
             height: 40px;
             width: 95%; 
             border-bottom: 3px solid rgb(124, 114, 114);
