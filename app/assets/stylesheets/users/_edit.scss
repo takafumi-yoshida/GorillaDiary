@@ -31,10 +31,13 @@
           &::-webkit-scrollbar {
             display:none;
         }
+        .post-box__wrapper{
+          position: relative;
           .mydiary-path {
             text-decoration: none;
             margin-left:30px;
             color: black;
+            position: relative;
             .post-box{
               width: 280px;
               height: 250px;
@@ -43,6 +46,7 @@
               border-radius: 10px;
               background-color: rgba(110, 85, 85, 0.486);
               display: inline-block;
+              position: relative;
               cursor: pointer;
               &:hover {
                 transition: 0.3s;
@@ -96,6 +100,20 @@
               }
             }
           }
+          .delete-btn {
+            display: block;
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            font-weight: 900;
+            top: 13px;
+            right: 8px;
+            background-color: rgb(199, 195, 195);
+            border-radius: 10px;
+            padding: 0 3px;
+          }
+        }
+          
           .empty-box {
             width: 50px;
             height: 50px;

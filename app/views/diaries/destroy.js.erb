@@ -1,0 +1,1 @@
+$(".posts-box").html('<%= j(render(partial:"users/mydiary", collection: @diaries ,as: :diary)) %>').append('<div class="empty-box"></div>');

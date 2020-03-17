@@ -43,6 +43,15 @@ class DiariesController < ApplicationController
       end
     end
   end
+
+  def destroy
+    @diary = Diary.find(params[:id])
+    if @diary.destroy
+      respond_to do |format|
+        format.js
+      end
+    end
+  end
   private
 
   def diary_params
