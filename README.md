@@ -1,7 +1,17 @@
-# アプリ名
+# アプリ
 
-- GorillaDiary
+## アプリ名 
+GorillaDiary
 
+## URL 
+http://18.180.23.62/
+
+## テストアカウントのID及びpassword
+- ID(email): a@a.sample
+- password：aaaaaaaa
+
+## ログイン時のサンプル画像
+  
 # 特徴
 
 - １日１回しか投稿ができない。
