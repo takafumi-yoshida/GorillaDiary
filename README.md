@@ -1,6 +1,6 @@
 # アプリ名
 
-#### GorillaDiary
+#### GorillaDiary.
 
 ### URL 
 http://18.180.23.62/
