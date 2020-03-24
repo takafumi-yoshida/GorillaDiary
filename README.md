@@ -13,7 +13,7 @@ http://18.180.23.62/
 - トップページ
 ![トップページ](https://user-images.githubusercontent.com/59679612/77407844-24826b80-6dfa-11ea-9886-d2d0ce670d38.png)
 - 日記投稿ページ
-![日記投稿ページ](https://user-images.githubusercontent.com/59679612/77407844-24826b80-6dfa-11ea-9886-d2d0ce670d38.png)
+![日記投稿ページ](https://user-images.githubusercontent.com/59679612/77409389-8643d500-6dfc-11ea-89da-c75cc1f7f25b.png)
 - 日記一覧ページ
 ![日記一覧ページ](https://user-images.githubusercontent.com/59679612/77407954-5693cd80-6dfa-11ea-84b7-eeac34383903.png)
 - マイページ
